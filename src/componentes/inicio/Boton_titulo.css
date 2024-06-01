@@ -21,5 +21,6 @@
 }
 .boton_inicio:active
 {
+    
     background-color: red;
 }
