@@ -1,6 +1,7 @@
 {
   "name": "historia_21",
   "private": true,
+  "homepage": "https://denis-ramos.github.io/gym_centimax/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
