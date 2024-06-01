@@ -5,8 +5,10 @@ import Boton_titulo from './Boton_titulo'
 function Inicio() {
   return (
     <div className="delimitador">
-      <Logo_titulo />
-      <Boton_titulo />
+      <div className="targeta_ini">      
+        <Logo_titulo />
+        <Boton_titulo />
+      </div>
     </div>
   )
 }

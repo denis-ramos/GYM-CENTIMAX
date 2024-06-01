@@ -1,11 +1,13 @@
 .delimitador
 {
     display: flex;
-    height: 812px;
+    height: auto;
     width: 375px;
     height: 812px;
     flex-direction: column;
     border: 1px solid white;
     overflow: hidden;
+    align-items: center;
+    justify-content: center;
     
 }
