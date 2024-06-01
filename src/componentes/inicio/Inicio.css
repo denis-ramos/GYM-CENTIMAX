@@ -1,0 +1,10 @@
+.delimitador
+{
+    display: flex;
+    height: auto;
+    width: 375px;
+    height: 812px;
+    flex-direction: column;
+    border: 1px solid white;
+    
+}
