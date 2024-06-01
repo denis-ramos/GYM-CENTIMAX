@@ -1,9 +1,9 @@
 .delimitador
 {
     display: flex;
-    height: auto;
+    height: 100vh;
+    min-height: 700px;
     width: 375px;
-    height: 812px;
     flex-direction: column;
     border: 1px solid white;
     overflow: hidden;
