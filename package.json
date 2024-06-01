@@ -1,16 +1,16 @@
 {
   "name": "historia_21",
   "private": true,
+  "homepage": "https://denis-ramos.github.io/GYM-CENTIMAX/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview",
-    "predeploy": "npm run build",
-    "deploy":"gh-pages -d dist",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy":"gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
