@@ -8,6 +8,7 @@ function Navigation() {
         <Routes >
             <Route path="/" element={<Inicio/>} />
             <Route path="/Inicio_de_secion" element={<Inicio_de_secion/>} />
+            <Route path="/*" element= {<p>Error 404 Recurso no encontrado</p>} />
         </Routes>
     </BrowserRouter>
   )
