@@ -1,0 +1,19 @@
+.contenedor_inicio_de_secion
+{
+    display: flex;
+    height: 100vh;
+    width: 375px;
+    flex-direction: column;
+    border: 1px solid white;
+    overflow: hidden;
+}
+.background_ima
+{
+    width: 100%;
+    height: 50vh;
+    background-size: 100% 100%;
+    background-image: url(../../assets/imagens/Background.png);
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position:top; /* Centra la imagen */
+
+}
