@@ -1,4 +1,4 @@
-.contenedor_inicio_de_secion
+.contenedor_registro
 {
     display: flex;
     height: 100vh;
@@ -7,3 +7,4 @@
     border: 1px solid white;
     overflow: hidden;
 }
+
