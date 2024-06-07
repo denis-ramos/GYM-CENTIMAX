@@ -39,7 +39,7 @@ function Inicio_de_secion() {
         if (personajes.email==inputValueCorreo && personajes.password==inputValueContra)
           {
             console.log("funciona")
-            navigate('/?di=${personaje.email}')
+            navigate(`/Usuario?id=${personajes.id}`);
           }
           
       }
