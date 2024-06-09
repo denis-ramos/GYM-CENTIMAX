@@ -24,7 +24,7 @@ function Usuario() {
 
   return (
     <div className="contenedor_usuario">
-      <BarraNavegacion users={users}/>
+      <BarraNavegacion users={users} id={id}/>
       <div className="subcontenedor_usuario">
         <div className="targetausuario">
           <p className="bienvenido_usuario">Bienvenido</p>

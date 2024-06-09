@@ -7,7 +7,7 @@ const BarraDeMenuPerfil = ({ name1,name2, avatar }) => {
       <div className="BarraDeMenuContenido">
         <div className="BarraDeMenuFoto">
           <img src={avatar} alt="Foto de perfil" />
-          <button>Editar</button>
+          
         </div>
         <p>
           {name1}
