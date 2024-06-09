@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./Usuario.css"
 import InformacionUsuario from './InformacionUsuario'
-import Barranav from '../com21.1/Barranav'
+import BarraNavegacion from '../BarraNavegacionAll/BarraNavegacion'
 import BotonoesUsuario from './BotonoesUsuario'
 import entrenamiento from "../../assets/imagens/Entrenamiento.png"
 import dieta from "../../assets/imagens/Dieta.png"
@@ -24,7 +24,7 @@ function Usuario() {
 
   return (
     <div className="contenedor_usuario">
-      <Barranav/>
+      <BarraNavegacion users={users}/>
       <div className="subcontenedor_usuario">
         <div className="targetausuario">
           <p className="bienvenido_usuario">Bienvenido</p>
