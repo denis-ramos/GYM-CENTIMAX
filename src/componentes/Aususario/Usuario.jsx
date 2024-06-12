@@ -6,12 +6,17 @@ import BotonoesUsuario from './BotonoesUsuario'
 import entrenamiento from "../../assets/imagens/Entrenamiento.png"
 import dieta from "../../assets/imagens/Dieta.png"
 import avances from "../../assets/imagens/AvancesFisicos.png"
+import useStore from '../../assets/store/useStore'
 import { useSearchParams } from 'react-router-dom'
 
 function Usuario() {
   const [users, setUsers] = useState([])
   let [searchParams, setSearchParams] = useSearchParams();
   const id=searchParams.get("id")
+  
+  useStore.setState({ id: id })
+
+
   useEffect(() => {
     fetch(`https://6661a6e163e6a0189feaef7e.mockapi.io/Users/${id}`)
       .then((res) => {
@@ -22,9 +27,11 @@ function Usuario() {
       });
   }, []);
 
+
   return (
+  
     <div className="contenedor_usuario">
-      <BarraNavegacion users={users} id={id}/>
+      <BarraNavegacion  id={id}/>
       <div className="subcontenedor_usuario">
         <div className="targetausuario">
           <p className="bienvenido_usuario">Bienvenido</p>

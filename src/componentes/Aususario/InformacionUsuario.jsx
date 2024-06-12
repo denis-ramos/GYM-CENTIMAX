@@ -2,7 +2,7 @@ import React from 'react'
 import "./InformacionUsuario.css"
 import imagen1 from "../../assets/imagens/imagen1.png"
 function InformacionUsuario(props) {
-    const users=props.users
+const users=props.users
     
   return (
     <div className="contenedor_InformacionUsuario">

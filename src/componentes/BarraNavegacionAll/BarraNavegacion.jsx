@@ -4,7 +4,17 @@ import barras from "../../assets/icons/3barritas.png";
 import BarraDeMenu from "./BarraDeMenu";
 import { NavLink } from "react-router-dom";
 const BarraNavegacion = (props) => {
-  const users=props.users
+  const [users, setUsers] = useState([])
+  useEffect(() => {
+    fetch(`https://6661a6e163e6a0189feaef7e.mockapi.io/Users/${props.id}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setUsers(data);
+      });
+  }, []);
+
   const [menuVisible, setMenuVisible] = useState(false);
 
   const toggleMenu = (event) => {
@@ -29,7 +39,7 @@ const BarraNavegacion = (props) => {
     <div className="barraDeNavegacion">
       <div className="contenedor">
       <NavLink to= {`/Usuario?id=${props.id}`} className="navlink-no-under">  
-        <h1 className="titulo">GYM CENTIMAXFIX</h1>
+        <h1 className="titulo">GYM CENTMAXFIX</h1>
       </NavLink>
         <img className="barritas " src={barras} alt="" onClick={toggleMenu}/>
       </div>

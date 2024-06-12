@@ -3,7 +3,8 @@ import Inicio from '../inicio/Inicio.jsx'
 import Inicio_de_secion from '../inicio_de_secion/Inicio_de_secion'
 import Registro from '../registro/Registro.jsx'
 import Usuario from '../Aususario/Usuario.jsx'
-
+import Entrenadores from '../Entrenador/Entrenadores.jsx'
+import PerfilEntrenador from '../PerfilEntrenador/PerfilEntrenador.jsx'
 import { HashRouter, Route, Router, Routes } from 'react-router-dom'
 function Navigation() {
   return (
@@ -13,6 +14,8 @@ function Navigation() {
             <Route path="/Inicio_de_secion" element={<Inicio_de_secion/>} />
             <Route path="/Registro" element={<Registro/>} />
             <Route path="/Usuario" element={<Usuario/>} />
+            <Route path="/Entrendores" element={<Entrenadores/>} />
+            <Route path="/entrenador/:id" element={<PerfilEntrenador />} />
             <Route path="/*" element= {<p>Error 404 Recurso no encontrado</p>} />
         </Routes>
     </HashRouter>
