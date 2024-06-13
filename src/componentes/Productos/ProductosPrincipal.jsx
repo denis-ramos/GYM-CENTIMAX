@@ -5,19 +5,21 @@ import "./ProductosPrincipal.css"
 
 import useStore from '../../assets/store/useStore.js';
 import BarraNavegacion from '../BarraNavegacionAll/BarraNavegacion.jsx'
+import { useSearchParams } from 'react-router-dom';
 
 function ProductosPrincipal() {
-
-
+  
   const id = useStore((state) => state.id);
+  
   return (
-  <div className="contenedorpri">
-    <BarraNavegacion id={id}/>
-    <Botones/>
+  <div className="contenedor_usuario">
+  <BarraNavegacion id={id}/>
+    <div className="contenedorpri">
+      <Botones/>
 
-  <Productos/>
+      <Productos/>
+    </div>
 
-    
   </div>
   )
 }

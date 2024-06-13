@@ -6,6 +6,7 @@
     right: -250px;
     top: 0px;
     transition: right 0.3s ease;
+    z-index: 1000;
 }
 .BarraMenu.visible {
     right: 0    ; /* Muestra el menú */
