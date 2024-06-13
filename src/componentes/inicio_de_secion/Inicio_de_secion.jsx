@@ -29,6 +29,30 @@ function Inicio_de_secion() {
       });
   }, []);
 
+  const [entrenadores, setEntrenadores] = useState([])
+
+  useEffect(() => {
+    fetch(`https://665fd3625425580055b101dd.mockapi.io/api/v1/Entrenadores`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setEntrenadores(data);
+      });
+  }, []);
+
+  const [nutricionista, setNutricionista] = useState([])
+
+  useEffect(() => {
+    fetch(`https://6661a6e163e6a0189feaef7e.mockapi.io/nutricionistas`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setNutricionista(data);
+      });
+  }, []);
+
   
   const navigate = useNavigate();
   const verificaionusuario=() =>{
@@ -40,6 +64,31 @@ function Inicio_de_secion() {
           {
             console.log("funciona")
             navigate(`/Usuario?id=${personajes.id}`);
+          }
+          
+      }
+      
+    )}
+
+    {entrenadores.map((personajes) => 
+      {
+        
+        if (personajes.email==inputValueCorreo && personajes.password==inputValueContra)
+          {
+            console.log("funciona")
+            navigate(`/InicioDeSesionEntrenador?id=${personajes.id}`);
+          }
+          
+      }
+      
+    )}
+    {nutricionista.map((personajes) => 
+      {
+        
+        if (personajes.email==inputValueCorreo && personajes.password==inputValueContra)
+          {
+            console.log("funciona")
+            navigate(`/InicioDeSesionNutricionista?id=${personajes.id}`);
           }
           
       }

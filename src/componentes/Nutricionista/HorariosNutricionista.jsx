@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from 'react-router-dom';
-import "./HorariosEntrenador.css";
-const HorarioEntrenador = () => {
+import "./HorariosNutricionista.css";
+const HorariosNutricionista = () => {
   const [entrenadores, setEntrenadores] = useState([]);
 
   useEffect(() => {
     const fetchEntrenadores = async () => {
       try {
         const response = await fetch(
-          "https://665fd3625425580055b101dd.mockapi.io/api/v1/Entrenadores"
+          "https://6661a6e163e6a0189feaef7e.mockapi.io/nutricionistas"
         );
         const data = await response.json();
         setEntrenadores(data.slice(0, 3));
@@ -23,9 +23,9 @@ const HorarioEntrenador = () => {
   return (
     
     <div className='HorarioTitulo'>
-      <h1>Entrenadores</h1>
+      <h1>Nutricionistas</h1>
       {entrenadores.map(entrenador => (
-        <NavLink to={`/entrenador/${entrenador.id}`} key={entrenador.id} className="navlink-no-under">
+        <NavLink to={`/Nutricionista/${entrenador.id}`} key={entrenador.id} className="navlink-no-under">
           <div className='Horario'>
             <div className='Imagen'>
               <img src={entrenador.avatar} alt={`${entrenador.firstname} ${entrenador.lastname}`} />
@@ -42,4 +42,4 @@ const HorarioEntrenador = () => {
   );
 };
 
-export default HorarioEntrenador;
+export default HorariosNutricionista;

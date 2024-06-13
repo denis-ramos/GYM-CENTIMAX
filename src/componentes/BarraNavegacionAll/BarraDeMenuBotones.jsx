@@ -1,9 +1,10 @@
 import React from "react";
 import "./BarraDeMenuBotones.css";
-import BuzonSugerencia from "../../assets/imagens/BuzonSugerencias.png";
-import Calendario from "../../assets/imagens/Calendario.png";
-import Mancuerna from "../../assets/imagens/Mancuerna.png";
-import Suplementos from "../../assets/imagens/Suplementos.png";
+import { FaDumbbell } from "react-icons/fa6";
+import { IoNutrition } from "react-icons/io5";
+import { IoIosChatbubbles } from "react-icons/io";
+import { FaCalendarAlt } from "react-icons/fa";
+import { FaSuitcase } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 
 const BarraDeMenuBotones = (props) => {
@@ -12,22 +13,40 @@ const BarraDeMenuBotones = (props) => {
     <div className="BarraMenuBotones">
       <p>Principal</p>
       <div className="Barra">
-        <div className="BarraBotonesImagenes">
-          <img src={Mancuerna} alt="" />
-          <img src={Suplementos} alt="" />
-          <img src={Calendario} alt="" />
-          
-        </div>
-        <div className="BarraBotonesTexto">
 
+
+        <div className="opciones">
+          <FaDumbbell color='rgba(161, 55, 55, 1)' size={22} style={{ marginLeft: '5px' }}/>
           <NavLink to={`/Entrendores`}>
-          <button>Entrenadores</button>
+            <button>Entrenadores</button>
           </NavLink>
-
-          <button>Recomendacion de suplementos</button>
-          <button>Clases disponibles</button>
-          
         </div>
+
+        <div className="opciones">
+          <IoNutrition color='rgba(161, 55, 55, 1)' size={22} style={{ marginLeft: '5px' }} />
+          <NavLink to={`/Nutricionistas`}>
+          <button>Nutricionistas</button>
+          </NavLink>
+        </div>
+        <div className="opciones1">
+          <FaSuitcase color='rgba(161, 55, 55, 1)' size={32} style={{ marginLeft: '5px' }}/>
+          <NavLink to={`/Productos`}>
+          <button>Recomendacion de suplementos</button>
+          </NavLink>
+        </div>
+        
+        <div className="opciones">
+         <FaCalendarAlt  color='rgba(161, 55, 55, 1)' size={22} style={{ marginLeft: '5px' }} />
+          <button>Clases disponibles</button>
+        </div>
+
+        <div className="opciones">
+         <IoIosChatbubbles color='rgba(161, 55, 55, 1)' size={22} style={{ marginLeft: '5px' }}/>
+         <NavLink to={`/ChatbotNutricion`}>
+         <button>Chat bot</button>
+         </NavLink>
+        </div>
+
       </div>
     </div>
   );

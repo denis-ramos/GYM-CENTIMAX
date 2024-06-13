@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
-import PerfilProfecionalEntrenador from "./PerfilProfecionalEntrenador.jsx";
-import NameFotoEntrenador from './NameFotoEntrenador.jsx';
-import ContactosEntrenador from './ContactosEntrenador.jsx';
-import BotonPerfilEntrenador from './BotonPerfilEntrenador.jsx';
-import useStore from '../../assets/store/useStore';
+import PerfilProfecionalNutricionista from "./PerfilProfecionalNutricionista.jsx";
+import NameFotoNutricionista from './NameFotoNutricionista.jsx';
+import ContactosNutricionista from './ContactosNutricionista.jsx';
+import BotonPerfilEntrenador from './BotonPerfilNutricionista.jsx';
+import useStore from '../../assets/store/useStore.js';
 import BarraNavegacion from '../BarraNavegacionAll/BarraNavegacion.jsx';
-import './PerfilEntrenador.css';
+import './PerfilNutricionista.css';
 
-const PerfilEntrenador = () => {
+const PerfilNutricionista = () => {
   const { id } = useParams();
   const [entrenador, setEntrenador] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -17,7 +17,7 @@ const PerfilEntrenador = () => {
   useEffect(() => {
     const fetchEntrenador = async () => {
       try {
-        const response = await fetch(`https://665fd3625425580055b101dd.mockapi.io/api/v1/Entrenadores/${id}`);
+        const response = await fetch(`https://6661a6e163e6a0189feaef7e.mockapi.io/nutricionistas/${id}`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -35,7 +35,7 @@ const PerfilEntrenador = () => {
 
   const ide = useStore((state) => state.id);
   const state = useStore.getState();
-  console.log(state.id);
+
 
   if (loading) return <div>Cargando...</div>;
   if (error) return <div>Error: {error}</div>;
@@ -48,9 +48,9 @@ const PerfilEntrenador = () => {
       <div className="cuadro">
         
         <div className='Perfil'>
-            <NameFotoEntrenador nombre={`${entrenador.firstname} ${entrenador.lastname}`} avatar={entrenador.avatar} />
-            <PerfilProfecionalEntrenador descripcion={entrenador.jobDescripto} />
-            <ContactosEntrenador number={entrenador.number} email={entrenador.email} />
+            <NameFotoNutricionista nombre={`${entrenador.firstname} ${entrenador.lastname}`} avatar={entrenador.avatar} />
+            <PerfilProfecionalNutricionista descripcion={entrenador.jobDescripto} />
+            <ContactosNutricionista number={entrenador.number} email={entrenador.email} />
             <BotonPerfilEntrenador />
         </div>
         
@@ -59,4 +59,4 @@ const PerfilEntrenador = () => {
   );
 }
 
-export default PerfilEntrenador;
+export default PerfilNutricionista;

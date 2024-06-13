@@ -1,12 +1,12 @@
   import React, { useEffect, useState } from 'react'
-  import HorarioEntrenador from './HorariosEntrenador';
-  import './Entrenadores.css';
+  import HorariosNutricionista from './HorariosNutricionista';
+  import './Nutricionistas.css';
   import BarraNavegacion from '../BarraNavegacionAll/BarraNavegacion';
   import { useSearchParams } from 'react-router-dom';
   import useStore from '../../assets/store/useStore';
-  const Entrenadores = () => {
+  const Nutricionistas = () => {
     const id = useStore((state) => state.id);
-    const state = useStore.getState();
+    
 
     return (
       <div className="contenedor_usuario">
@@ -14,7 +14,7 @@
         <div className="cuadro">
           
           <div className='entrenador'>
-              <HorarioEntrenador  />
+              <HorariosNutricionista  />
           </div>
         </div>
 
@@ -22,4 +22,4 @@
     )
   }
 
-  export default Entrenadores
+  export default Nutricionistas
