@@ -43,7 +43,7 @@ const BarraDeMenuBotones = (props) => {
         <div className="opciones">
          <IoIosChatbubbles color='rgba(161, 55, 55, 1)' size={22} style={{ marginLeft: '5px' }}/>
          <NavLink to={`/ChatbotNutricion`}>
-         <button>Chat bot</button>
+         <button>NutriSmart</button>
          </NavLink>
         </div>
 

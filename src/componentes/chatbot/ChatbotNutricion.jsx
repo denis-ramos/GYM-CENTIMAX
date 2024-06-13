@@ -14,7 +14,7 @@ function ChatbotNutricion() {
       <VolverAtras/>
         <div className="contenedor_chat">      
           <div className="Chatbot">
-              <h1>Chatbot Nutricional</h1>
+              {/* <h1>Chatbot Nutricional</h1> */}
               <Chatbot
               config={config}
               messageParser={MessageParser}
