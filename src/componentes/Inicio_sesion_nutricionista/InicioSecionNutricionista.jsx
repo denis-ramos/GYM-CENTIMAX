@@ -4,15 +4,15 @@ import BotonoesUsuario from '../Aususario/BotonoesUsuario';
 import Barranav from "../Productos/Barranav"
 import dietaN from "../../assets/imagens/DietaN.png"
 import dietaA from "../../assets/imagens/DietaA.png"
-import { useSearchParams } from 'react-router-dom';
-
+import { NavLink, useSearchParams } from 'react-router-dom';
+import useStore from '../../assets/store/useStore'
 
 function InicioSecionNutricionista() {
     const [users, setUsers] = useState([])
     let [searchParams, setSearchParams] = useSearchParams();
     const id=searchParams.get("id")
     
-
+    useStore.setState({ id: id })
   
   
     useEffect(() => {
@@ -32,7 +32,9 @@ function InicioSecionNutricionista() {
             <div className="targetausuario">
             <p className="bienvenido_usuario">Bienvenido</p>
             <InformacionUsuario users={users} />
-            <BotonoesUsuario backgroundImage={dietaN} text="ASIGNAR DIETA"/>
+            <NavLink to="/AsignarDieta">
+              <BotonoesUsuario backgroundImage={dietaN} text="ASIGNAR DIETA"/>
+            </NavLink>
             <BotonoesUsuario backgroundImage={dietaA} text="DIETAS ASIGNADAS"/>
             <BotonoesUsuario backgroundImage={dietaN} text="EVALUACION NUTRICIONAL"/>
             </div>

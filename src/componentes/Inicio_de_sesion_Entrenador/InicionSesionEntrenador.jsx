@@ -7,13 +7,14 @@ import asignar from "../../assets/imagens/AsignarRutina.png"
 import asignados from "../../assets/imagens/RutinasAsignadas.png"
 import evaluacion from "../../assets/imagens/EvaluacionFisica.png"
 import { useSearchParams } from 'react-router-dom';
+import useStore from '../../assets/store/useStore'
 function InicionSesionEntrenador() {
 
     const [users, setUsers] = useState([])
     let [searchParams, setSearchParams] = useSearchParams();
     const id=searchParams.get("id")
     
-    // useStore.setState({ id: id })
+    useStore.setState({ id: id })
   
   
     useEffect(() => {

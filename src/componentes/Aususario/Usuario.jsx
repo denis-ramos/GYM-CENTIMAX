@@ -7,6 +7,7 @@ import entrenamiento from "../../assets/imagens/Entrenamiento.png"
 import dieta from "../../assets/imagens/Dieta.png"
 import avances from "../../assets/imagens/AvancesFisicos.png"
 import useStore from '../../assets/store/useStore'
+import Notificacion from '../Notificacion/Notificacion'
 import { NavLink, useSearchParams } from 'react-router-dom'
 
 function Usuario() {
@@ -32,11 +33,14 @@ function Usuario() {
   
     <div className="contenedor_usuario">
       <BarraNavegacion  id={id}/>
+      <Notificacion/>
       <div className="subcontenedor_usuario">
         <div className="targetausuario">
           <p className="bienvenido_usuario">Bienvenido</p>
           <InformacionUsuario users={users} />
+          <NavLink to="/RutinasAsignadas" className="navlink-no-under">
           <BotonoesUsuario backgroundImage={entrenamiento} text="Entrenamiento"/>
+          </NavLink>
           <BotonoesUsuario backgroundImage={dieta} text="Dieta"/>
           
           <NavLink to="/Avances" className="navlink-no-under">

@@ -14,7 +14,13 @@ import ChatbotNutricion from '../chatbot/ChatbotNutricion.jsx'
 import ReservaClasesCircuitos from '../ReservaClasesCircuitos/ReservaClasesCircuitos.jsx'
 import TarjetaGrafica from '../graficaDeEvaluacion/TarjetaGrafica.jsx'
 import ClasesDisponibles from '../ClasesDisponibles/ClasesDisponibles.jsx'
+import AsignarDieta from '../asignarDieta/AsignarDieta.jsx'
+import DietaAsignada from '../asignarDieta/DietaAsignada.jsx'
+import AlimentosAsignar from '../asignarAlimentos/AlimentosAsignar.jsx'
+import TarjetaRutina from '../rutinaAsignada/TarjetaRutina.jsx'
+import TarjetaTemporizador from '../temporizador/TarjetaTemporizador.jsx'
 import { HashRouter, Route, Router, Routes } from 'react-router-dom'
+import RutinaAsignadaCliente from '../RutinaAsignadaCliente/RutinaAsignadaCliente.jsx'
 import Producto from '../Productos/Producto.jsx'
 function Navigation() {
   return (
@@ -36,7 +42,12 @@ function Navigation() {
             <Route path="/ClasesDisponibles" element={<ClasesDisponibles/>} />
             <Route path="/Reservas" element={<ReservaClasesCircuitos/>} />
             <Route path="/Avances" element={<TarjetaGrafica/>} />
-
+            <Route path="/AsignarDieta" element={<AsignarDieta/>} />
+            <Route path="/Asiganrdieta" element={<AlimentosAsignar/>} />
+            <Route path="/dietasasignadas" element={<DietaAsignada/>} />
+            <Route path="/RutinasAsignadas" element={<TarjetaRutina/>} />
+            <Route path="/Informacionderutinas" element={<RutinaAsignadaCliente/>} />
+            <Route path="/temporisador" element={<TarjetaTemporizador/>} />
             <Route path="/*" element= {<p>Error 404 Recurso no encontrado</p>} />
         </Routes>
     </HashRouter>
