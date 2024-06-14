@@ -40,7 +40,7 @@ function Usuario() {
         <div className="targetausuario">
           <p className="bienvenido_usuario">Bienvenido</p>
           <InformacionUsuario users={users} />
-          <FaCalendarDays />
+          
 
           <NavLink to="/RutinasAsignadas" className="navlink-no-under">   
           <BotonoesUsuario backgroundImage={entrenamiento} text="Entrenamiento"/>
