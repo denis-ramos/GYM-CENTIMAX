@@ -10,7 +10,7 @@ function TarjetaGrafica (){
     return(
         <>
         <div className="contenedorCard">
-        <BarraNavegacion id={id}/>
+            <BarraNavegacion id={id}/>
             <img className="portada"src={ejerPortada} alt="" />
             <Grafica/>
         </div>
