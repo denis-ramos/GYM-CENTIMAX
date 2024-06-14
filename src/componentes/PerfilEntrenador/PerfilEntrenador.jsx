@@ -7,8 +7,10 @@ import BotonPerfilEntrenador from './BotonPerfilEntrenador.jsx';
 import useStore from '../../assets/store/useStore';
 import BarraNavegacion from '../BarraNavegacionAll/BarraNavegacion.jsx';
 import './PerfilEntrenador.css';
-
+import useEntre from '../../assets/store/useEntre.js'
 const PerfilEntrenador = () => {
+
+
   const { id } = useParams();
   const [entrenador, setEntrenador] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -41,7 +43,7 @@ const PerfilEntrenador = () => {
   if (error) return <div>Error: {error}</div>;
 
  
-
+  useEntre.setState({ id: entrenador.id})
   return (
     <div className="contenedor_usuario">
       <BarraNavegacion  id={ide}/>

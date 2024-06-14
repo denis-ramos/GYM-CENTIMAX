@@ -35,8 +35,12 @@ function InicioSecionNutricionista() {
             <NavLink to="/AsignarDieta">
               <BotonoesUsuario backgroundImage={dietaN} text="ASIGNAR DIETA"/>
             </NavLink>
+            <NavLink to="/DietasAsiganadas">
             <BotonoesUsuario backgroundImage={dietaA} text="DIETAS ASIGNADAS"/>
+            </NavLink>
+            <NavLink to="/EvaluacionNutricional">
             <BotonoesUsuario backgroundImage={dietaN} text="EVALUACION NUTRICIONAL"/>
+            </NavLink>
             </div>
         </div>
    </div>

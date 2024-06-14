@@ -11,13 +11,13 @@ import Notificacion from '../Notificacion/Notificacion'
 import { NavLink, useSearchParams } from 'react-router-dom'
 
 function Usuario() {
-  const [users, setUsers] = useState([])
+  
   let [searchParams, setSearchParams] = useSearchParams();
   const id=searchParams.get("id")
   
   useStore.setState({ id: id })
 
-
+  const [users, setUsers] = useState([])
   useEffect(() => {
     fetch(`https://6661a6e163e6a0189feaef7e.mockapi.io/Users/${id}`)
       .then((res) => {
@@ -38,11 +38,12 @@ function Usuario() {
         <div className="targetausuario">
           <p className="bienvenido_usuario">Bienvenido</p>
           <InformacionUsuario users={users} />
-          <NavLink to="/RutinasAsignadas" className="navlink-no-under">
+          <NavLink to="/RutinasAsignadas" className="navlink-no-under">   
           <BotonoesUsuario backgroundImage={entrenamiento} text="Entrenamiento"/>
           </NavLink>
+          <NavLink to="/DietaAsignadas" className="navlink-no-under">
           <BotonoesUsuario backgroundImage={dieta} text="Dieta"/>
-          
+          </NavLink>
           <NavLink to="/Avances" className="navlink-no-under">
             <BotonoesUsuario backgroundImage={avances} text="Avnaces Fisicos"/>
           </NavLink>

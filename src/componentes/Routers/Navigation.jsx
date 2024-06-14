@@ -19,9 +19,14 @@ import DietaAsignada from '../asignarDieta/DietaAsignada.jsx'
 import AlimentosAsignar from '../asignarAlimentos/AlimentosAsignar.jsx'
 import TarjetaRutina from '../rutinaAsignada/TarjetaRutina.jsx'
 import TarjetaTemporizador from '../temporizador/TarjetaTemporizador.jsx'
+import DietaAsignadas from '../DietaAsignada /DietaAsignadas.jsx'
+import EvaluacionNutricional from '../EvaluacionNutricionista/EvaluacionNutricional.jsx'
+import RecomendacionDieta from '../RecomendacionDieta/RecomendacionDieta.jsx'
+import CalificacionEntrenador from '../CalificacionEntrenador/CalificacionEntrenador.jsx'
 import { HashRouter, Route, Router, Routes } from 'react-router-dom'
 import RutinaAsignadaCliente from '../RutinaAsignadaCliente/RutinaAsignadaCliente.jsx'
 import Producto from '../Productos/Producto.jsx'
+import DietaAsignadaCliente from '../dietaasignadacliente/DietaAsignadaCliente.jsx'
 function Navigation() {
   return (
     <HashRouter >
@@ -48,7 +53,13 @@ function Navigation() {
             <Route path="/RutinasAsignadas" element={<TarjetaRutina/>} />
             <Route path="/Informacionderutinas" element={<RutinaAsignadaCliente/>} />
             <Route path="/temporisador" element={<TarjetaTemporizador/>} />
+            <Route path="/Calificacion" element={<CalificacionEntrenador/>} />
+            <Route path="/DietaAsignadas" element={<DietaAsignadaCliente/>} />
+            <Route path="/Recomendacion" element={<RecomendacionDieta />} />
+            <Route path="/DietasAsiganadas" element={<DietaAsignada />} />
+            <Route path="/EvaluacionNutricional" element={<EvaluacionNutricional/>} />
             <Route path="/*" element= {<p>Error 404 Recurso no encontrado</p>} />
+
         </Routes>
     </HashRouter>
   )

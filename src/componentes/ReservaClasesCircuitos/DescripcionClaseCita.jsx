@@ -17,7 +17,7 @@ const DescripcionClaseCita = (props) => {
     return numeros;
   }
 
-  const [showModal, setShowModal] = useState(false);
+ 
 
 
 
@@ -33,7 +33,7 @@ const DescripcionClaseCita = (props) => {
       });
   }, []);
   
-  
+  const [showModal, setShowModal] = useState(false);
 const handleButtonClick = () => {
   setShowModal(true);
 };
