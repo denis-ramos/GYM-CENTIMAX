@@ -6,7 +6,7 @@ import Barranav from "../Productos/Barranav"
 import asignar from "../../assets/imagens/AsignarRutina.png"
 import asignados from "../../assets/imagens/RutinasAsignadas.png"
 import evaluacion from "../../assets/imagens/EvaluacionFisica.png"
-import { useSearchParams } from 'react-router-dom';
+import { NavLink, useSearchParams } from 'react-router-dom';
 import useStore from '../../assets/store/useStore'
 function InicionSesionEntrenador() {
 
@@ -37,9 +37,14 @@ function InicionSesionEntrenador() {
         <div className="targetausuario">
           <p className="bienvenido_usuario">Bienvenido</p>
           <InformacionUsuario users={users} />
+          <NavLink to="/EjercicioA">
           <BotonoesUsuario backgroundImage={asignar} text="ASIGNAR RUTINA"/>
+          </NavLink>
           <BotonoesUsuario backgroundImage={asignados} text="RUTINAS ASIGNADAS"/>
+
+          <NavLink to="/EvaluacionNutricional">
           <BotonoesUsuario backgroundImage={evaluacion} text="EVALUACION FISICA"/>
+          </NavLink>
         </div>
         
       </div>

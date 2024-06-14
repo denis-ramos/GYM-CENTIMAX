@@ -7,7 +7,9 @@ import entrenamiento from "../../assets/imagens/Entrenamiento.png"
 import dieta from "../../assets/imagens/Dieta.png"
 import avances from "../../assets/imagens/AvancesFisicos.png"
 import useStore from '../../assets/store/useStore'
+
 import Notificacion from '../Notificacion/Notificacion'
+import { FaCalendarDays } from "react-icons/fa6";
 import { NavLink, useSearchParams } from 'react-router-dom'
 
 function Usuario() {
@@ -38,6 +40,8 @@ function Usuario() {
         <div className="targetausuario">
           <p className="bienvenido_usuario">Bienvenido</p>
           <InformacionUsuario users={users} />
+          <FaCalendarDays />
+
           <NavLink to="/RutinasAsignadas" className="navlink-no-under">   
           <BotonoesUsuario backgroundImage={entrenamiento} text="Entrenamiento"/>
           </NavLink>
