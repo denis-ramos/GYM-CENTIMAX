@@ -7,7 +7,7 @@ import entrenamiento from "../../assets/imagens/Entrenamiento.png"
 import dieta from "../../assets/imagens/Dieta.png"
 import avances from "../../assets/imagens/AvancesFisicos.png"
 import useStore from '../../assets/store/useStore'
-import { useSearchParams } from 'react-router-dom'
+import { NavLink, useSearchParams } from 'react-router-dom'
 
 function Usuario() {
   const [users, setUsers] = useState([])
@@ -38,7 +38,10 @@ function Usuario() {
           <InformacionUsuario users={users} />
           <BotonoesUsuario backgroundImage={entrenamiento} text="Entrenamiento"/>
           <BotonoesUsuario backgroundImage={dieta} text="Dieta"/>
-          <BotonoesUsuario backgroundImage={avances} text="Avnaces Fisicos"/>
+          
+          <NavLink to="/Avances" className="navlink-no-under">
+            <BotonoesUsuario backgroundImage={avances} text="Avnaces Fisicos"/>
+          </NavLink>
         </div>
         
       </div>
