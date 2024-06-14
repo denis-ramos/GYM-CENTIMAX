@@ -14,13 +14,13 @@ function Productos() {
   }, []);
   return (
     <div className="contenedor_productos">
-    <p className="subtitulo">SUPLEMENTOS</p>
-    <div className="orgprod">
-    {users.map((personajes) => (
-      <Productos_targ producto={personajes}/>
-    ))}
-    
-    </div>
+      <p className="subtitulo">SUPLEMENTOS</p>
+      <div className="orgprod">
+      {users.map((personajes) => (
+        <Productos_targ producto={personajes} key={personajes.id}/>
+      ))}
+      
+      </div>
     </div>
   )
 }

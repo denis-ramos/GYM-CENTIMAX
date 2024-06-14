@@ -11,6 +11,8 @@ import PerfilNutricionista from '../PerfilNutricionista/PerfilNutricionista.jsx'
 import Nutricionistas from '../Nutricionista/Nutricionistas.jsx'
 import ProductosPrincipal from '../Productos/ProductosPrincipal.jsx'
 import ChatbotNutricion from '../chatbot/ChatbotNutricion.jsx'
+import ReservaClasesCircuitos from '../ReservaClasesCircuitos/ReservaClasesCircuitos.jsx'
+import ClasesDisponibles from '../ClasesDisponibles/ClasesDisponibles.jsx'
 import { HashRouter, Route, Router, Routes } from 'react-router-dom'
 import Producto from '../Productos/Producto.jsx'
 function Navigation() {
@@ -30,6 +32,8 @@ function Navigation() {
             <Route path="/Productos" element={<ProductosPrincipal />} />
             <Route path="/Producto" element={<Producto />} />
             <Route path="/ChatbotNutricion" element={<ChatbotNutricion/>} />
+            <Route path="/ClasesDisponibles" element={<ClasesDisponibles/>} />
+            <Route path="/Reservas" element={<ReservaClasesCircuitos/>} />
 
             <Route path="/*" element= {<p>Error 404 Recurso no encontrado</p>} />
         </Routes>

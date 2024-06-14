@@ -3,6 +3,8 @@ import "./BarraNavegacion.css";
 import barras from "../../assets/icons/3barritas.png";
 import BarraDeMenu from "./BarraDeMenu";
 import { NavLink } from "react-router-dom";
+import { TiBell } from "react-icons/ti";
+import TimelineNovedades from "../TimelineNovedades/TimelineNovedades";
 const BarraNavegacion = (props) => {
   const [users, setUsers] = useState([])
   useEffect(() => {
@@ -35,13 +37,34 @@ const BarraNavegacion = (props) => {
       document.body.removeEventListener('click', handleClickOutside);
     };
   }, [menuVisible]);
+
+  const [showModal, setShowModal] = useState(false);
+  const handleButtonClick = () => {
+    setShowModal(!showModal); // Invierte el estado actual de showModal
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
   return (
     <div className="barraDeNavegacion">
       <div className="contenedor">
       <NavLink to= {`/Usuario?id=${props.id}`} className="navlink-no-under">  
         <h1 className="titulo">GYM CENTMAXFIX</h1>
       </NavLink>
+      <div className="barra_noti">      
+        
+        <TiBell color='white' onClick={handleButtonClick}size={28} style={{ marginRight: '5px' }} />
+        {showModal && (
+                <div className="modal1">
+                    <div className="modal-content1">
+                        <TimelineNovedades  onClose={handleCloseModal} />
+                    </div>
+                </div>
+        )}
+
         <img className="barritas " src={barras} alt="" onClick={toggleMenu}/>
+      </div>
       </div>
       <BarraDeMenu users={users} isVisible={menuVisible} />
     </div>

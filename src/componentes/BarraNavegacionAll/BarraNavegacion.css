@@ -31,3 +31,28 @@
 .navlink-no-under {
     text-decoration: none;
   } 
+
+.modal1 {
+    position: absolute;
+    top: 450%;
+    right: 30%;
+    bottom: 0;
+    left: 0;
+    z-index: 999; /* Asegúrate de que este valor de z-index sea mayor que cualquier otro elemento dentro de barra_noti */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para modal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal-content1 {
+
+padding: 20px;
+border-radius: 8px;
+
+max-width: 200px; /* Ajusta el tamaño del modal según tus necesidades */
+width: 100%;
+}
+  
+   

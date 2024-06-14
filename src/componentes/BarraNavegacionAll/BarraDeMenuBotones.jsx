@@ -37,7 +37,10 @@ const BarraDeMenuBotones = (props) => {
         
         <div className="opciones">
          <FaCalendarAlt  color='rgba(161, 55, 55, 1)' size={22} style={{ marginLeft: '5px' }} />
+         <NavLink to={`/ClasesDisponibles`}>
           <button>Clases disponibles</button>
+         </NavLink>
+         
         </div>
 
         <div className="opciones">
